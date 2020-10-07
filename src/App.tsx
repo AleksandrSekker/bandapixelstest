@@ -1,11 +1,48 @@
-import React from 'react';
-
-import { Counter } from './features/counter/Counter';
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import { Form } from './components/Form';
+import { TodoList } from './components/TodoList';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectInputText } from './features/inputSlice';
+import { selectTodo } from './features/todoSlice';
+import { setfilteredTodos } from './features/filteredTodosSlice';
+import { selectStatus } from './features/statusSlice';
 
 function App() {
+  const dispatch = useDispatch();
+  const status = useSelector(selectStatus);
+  const todos = useSelector(selectTodo);
+  useEffect(() => {
+    filterHandler();
+  }, [todos, status]);
+  const filterHandler = () => {
+    switch (status) {
+      case 'completed':
+        dispatch(
+          setfilteredTodos(
+            todos.filter((todo: any) => todo.isCompleted === true)
+          )
+        );
+        break;
+      case 'uncompleted':
+        dispatch(
+          setfilteredTodos(
+            todos.filter((todo: any) => todo.isCompleted === false)
+          )
+        );
+        break;
+      default:
+        dispatch(setfilteredTodos(todos));
+        break;
+    }
+  };
   return (
-    <div>
-      <h1>Hello world</h1>
+    <div className="App">
+      <header>
+        <h1>Todo List</h1>
+      </header>
+      <Form />
+      <TodoList />
     </div>
   );
 }

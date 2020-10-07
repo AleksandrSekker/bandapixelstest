@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(120deg, #336180 0%, #945646 100%);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 2rem;
+  font-family: 'Bad Script', cursive;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+form input {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  padding-left: 2rem;
+}
+form button {
+  color: #1293e9;
+  background: #f7fffe;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+form button:hover {
+  background: #1293e9;
+  color: white;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+  border-radius: 1rem;
+}
+.filter-todo {
+  padding: 1rem;
+}
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.complete-btn:hover {
+  background: rgb(11, 212, 162);
+  color: white;
+  transition: all 1s ease;
+}
+.trash-btn {
+  background: #ffffff;
+  color: rgb(255, 0, 0);
+  border-radius: 2rem;
+}
+.trash-btn:hover {
+  background: rgb(255, 0, 0);
+  color: white;
+  border-radius: 0;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  transition: all 1s ease;
+}
+.complete-btn {
+  background: white;
+  color: rgb(11, 212, 162);
+}
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+
+.select {
+  margin: 0rem;
+
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: #1293e9;
+  margin-left: 1rem;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+
+  width: 12rem;
+}
+
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background: #1293e9;
+  cursor: pointer;
+  pointer-events: none;
+}
