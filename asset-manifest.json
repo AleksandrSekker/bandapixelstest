@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/bandapixelstest/static/css/main.45a60954.chunk.css",
-    "main.js": "/bandapixelstest/static/js/main.7f9b4c3a.chunk.js",
-    "main.js.map": "/bandapixelstest/static/js/main.7f9b4c3a.chunk.js.map",
+    "main.js": "/bandapixelstest/static/js/main.ca36113b.chunk.js",
+    "main.js.map": "/bandapixelstest/static/js/main.ca36113b.chunk.js.map",
     "runtime-main.js": "/bandapixelstest/static/js/runtime-main.f967e32e.js",
     "runtime-main.js.map": "/bandapixelstest/static/js/runtime-main.f967e32e.js.map",
     "static/js/2.b1dacd56.chunk.js": "/bandapixelstest/static/js/2.b1dacd56.chunk.js",
     "static/js/2.b1dacd56.chunk.js.map": "/bandapixelstest/static/js/2.b1dacd56.chunk.js.map",
     "index.html": "/bandapixelstest/index.html",
-    "precache-manifest.4dc4e9af46270cd9d2a730c835afaa35.js": "/bandapixelstest/precache-manifest.4dc4e9af46270cd9d2a730c835afaa35.js",
+    "precache-manifest.d893299ff8c1a553c2da35e40f75f1b1.js": "/bandapixelstest/precache-manifest.d893299ff8c1a553c2da35e40f75f1b1.js",
     "service-worker.js": "/bandapixelstest/service-worker.js",
     "static/css/main.45a60954.chunk.css.map": "/bandapixelstest/static/css/main.45a60954.chunk.css.map",
     "static/js/2.b1dacd56.chunk.js.LICENSE.txt": "/bandapixelstest/static/js/2.b1dacd56.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.f967e32e.js",
     "static/js/2.b1dacd56.chunk.js",
     "static/css/main.45a60954.chunk.css",
-    "static/js/main.7f9b4c3a.chunk.js"
+    "static/js/main.ca36113b.chunk.js"
   ]
 }
