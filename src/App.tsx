@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import { Form } from './components/Form';
 import { TodoList } from './components/TodoList';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectInputText } from './features/inputSlice';
+
 import { selectTodo } from './features/todoSlice';
 import { setfilteredTodos } from './features/filteredTodosSlice';
 import { selectStatus } from './features/statusSlice';
@@ -14,7 +14,8 @@ function App() {
   const todos = useSelector(selectTodo);
   useEffect(() => {
     filterHandler();
-  }, [todos, status]);
+  }, [todos, status]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const filterHandler = () => {
     switch (status) {
       case 'completed':

@@ -6,28 +6,30 @@ import { settodos } from '../features/todoSlice';
 import { selectTodo } from '../features/todoSlice';
 import { setStatus } from '../features/statusSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faPlusSquare,
-} from '@fortawesome/free-solid-svg-icons';
-interface Props {}
+import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 
-export const Form = (props: Props) => {
+export const Form = () => {
   const todos = useSelector(selectTodo);
   const inputText = useSelector(selectInputText);
   const dispatch = useDispatch();
-  const inputTextHandler = (e: any) => {
+  const inputTextHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(setinputText(e.target.value));
   };
-  const submitTodoHandler = (e: any) => {
+  const submitTodoHandler = (e: React.MouseEvent) => {
     e.preventDefault();
-    dispatch(
-      settodos([...todos, { text: inputText, isCompleted: false, id: uuid() }])
-    );
+    if (inputText !== '') {
+      dispatch(
+        settodos([
+          ...todos,
+          { text: inputText, isCompleted: false, id: uuid() },
+        ])
+      );
+    }
+
     dispatch(setinputText(''));
   };
-  const statusHandler = (e: any) => {
+  const statusHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
     dispatch(setStatus(e.target.value));
-    console.log(e.target.value);
   };
   return (
     <form>

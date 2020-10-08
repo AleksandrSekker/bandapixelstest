@@ -1,8 +1,8 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { AppThunk, RootState } from '../app/store';
+import { createSlice } from '@reduxjs/toolkit';
+import { RootState } from '../app/store';
 
 interface InputState {
-  inputText: any;
+  inputText: string;
 }
 
 const initialState: InputState = {

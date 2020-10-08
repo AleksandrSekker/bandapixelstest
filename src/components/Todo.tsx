@@ -4,7 +4,7 @@ import { settodos, selectTodo } from '../features/todoSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faTrash } from '@fortawesome/free-solid-svg-icons';
 interface Props {
-  text: any;
+  text: Text;
   todo: any;
 }
 

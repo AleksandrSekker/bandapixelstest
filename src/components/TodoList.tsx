@@ -1,15 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { selectTodo } from '../features/todoSlice';
 import { Todo } from './Todo';
 import { selectFilteredTodos } from '../features/filteredTodosSlice';
 
-interface Props {}
-
-export const TodoList = (props: Props) => {
+export const TodoList = () => {
   const filteredtodo = useSelector(selectFilteredTodos);
-  const todos = useSelector(selectTodo);
-
   return (
     <div className="todo-container">
       <ul className="todo-list">
